@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>style.qss</file>
+        <file>icons/logo.png</file>
+        <file>shaders/lines_fragment.glsl</file>
+        <file>shaders/lines_vertex.glsl</file>
+        <file>shaders/lines_geometry.glsl</file>
+        <file>shaders/points_fragment.glsl</file>
+        <file>shaders/points_vertex.glsl</file>
+    </qresource>
+</RCC>

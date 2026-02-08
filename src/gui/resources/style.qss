@@ -1,0 +1,152 @@
+QDialog {
+  background-color:rgb(70, 70, 70);
+}
+
+QScrollBar:vertical {
+  background:rgb(70, 119, 193);
+}
+
+QLabel {
+  color: rgb(240, 240, 240);
+  font-family: 'Inter';
+}
+
+QPushButton {
+  background-color: rgb(70, 119, 193);
+  color: rgb(240, 240, 240);
+  font-weight: 450;
+  border: none;
+  border-radius: 5px;
+}
+
+QPushButton:hover {
+  background-color: rgb(53, 90, 145);
+  border: none;
+  border-radius: 6px;
+}
+
+QPushButton:pressed {
+  background-color: rgb(53, 90, 145);
+  border: none;
+  border-radius: 6px;
+}
+
+QComboBox {
+  color:rgb(240, 240, 240);
+  background-color:rgb(70, 119, 193);
+}
+
+QComboBox::item {
+  color:rgb(240, 240, 240);
+  background-color:rgb(70, 119, 193);
+}
+
+QComboBox::item:selected {
+  background-color:rgb(70, 119, 193);
+}
+
+QColorDialog QWidget {
+  background-color:rgb(70, 119, 193);
+}
+
+QColorDialog QLineEdit, QColorDialog QSpinBox {
+  background-color:rgb(70, 119, 193);
+  color:rgb(240, 240, 240);
+}
+
+QPushButton {
+  background-color: rgb(70, 119, 193);
+  color: rgb(240, 240, 240);
+  font-weight: 450;
+  border: none;
+  border-radius: 5px;
+}
+
+QPushButton:hover {
+  background-color: rgb(70, 119, 193);
+  border: none;
+  border-radius: 6px;
+}
+
+QPushButton:pressed {
+  background-color: rgb(70, 119, 193);
+  border: none;
+  border-radius: 6px;
+}
+
+QLineEdit, QSpinBox, QDoubleSpinBox {
+  background-color:rgb(70, 119, 193);
+  color:rgb(240, 240, 240);
+  font-weight: 450;
+}
+
+s21--ViewerMenu {
+  background-color:rgb(70, 119, 193);
+}
+
+s21--ViewerMenu::item {
+  border-radius: 3px;
+  padding: 5px 2px;
+  color:rgb(240, 240, 240);
+}
+
+s21--ViewerMenu::item:selected {
+  background-color:rgb(70, 119, 193);
+}
+
+QMenu#fileMenu {
+  min-width: 75px;
+  background-color:rgb(70, 119, 193);
+  border-radius: 8px;
+  padding: 2px;
+}
+
+QMenu#fileMenu::item {
+  width: 100%;
+  padding: 3px;
+  color:rgb(240, 240, 240);
+}
+
+QMenu#fileMenu::item:selected {
+  background-color:rgb(70, 119, 193);
+}
+
+QStatusBar {
+  background-color: rgb(70, 119, 193);
+}
+
+s21--MainWindow {
+  background-color:rgb(70, 70, 70);
+}
+
+.status {
+  color: rgb(240, 240, 240);
+}
+
+s21--SettingsPanel {
+  background-color: rgb(70, 70, 70);
+}
+
+.category-list {
+  background-color: transparent;
+  color:rgb(240, 240, 240);
+  border: none;
+  border-right: 1px solid black;
+}
+
+.category-list::item {
+  font-size: 16px;
+  padding: 4px;
+}
+
+.category-list::item:selected {
+  border-radius: 3px;
+  background-color:rgb(70, 119, 193);
+  border: none;
+  outline: none;
+}
+
+#settings-area {
+  background-color: transparent;
+  border-bottom: 1px solid black;
+}

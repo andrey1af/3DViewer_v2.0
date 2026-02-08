@@ -1,0 +1,159 @@
+\input texinfo   @c -*-texinfo-*-
+@c %**start of header
+@setfilename 3DViewer.info
+@settitle 3DViewer Documentation
+@c %**end of header
+
+@copying
+3DViewer -- Documentation for the 3DViewer project.
+
+Copyright (C) 2025 s21 Jujutsu Kaisen Team
+
+Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation.
+@end copying
+
+@titlepage
+@title 3DViewer
+@subtitle User and Developer Documentation
+@author s21 Jujutsu Kaisen Team
+@page
+@vskip 0pt plus 1filll
+@insertcopying
+@end titlepage
+
+@contents
+
+@node Top
+@top 3DViewer
+
+@menu
+* Introduction::
+* Quick Start::
+* Project Structure::
+* Usage::
+* Testing::
+* Extension and Development::
+* License::
+* Contacts::
+@end menu
+
+@node Introduction
+@chapter Introduction
+
+@strong{3DViewer} is a cross-platform application for viewing and analyzing 3D models in OBJ format.  
+The project supports basic affine transformations, visualization, as well as unit testing and code coverage.
+
+@node Quick Start
+@chapter Quick Start
+
+@section Requirements
+
+@itemize
+@item GCC >= 9 or Clang >= 10
+@item Qt5 (qtbase5-dev, qt5-qmake, qtchooser)
+@item GoogleTest (libgtest-dev)
+@item lcov, valgrind, texinfo, texlive (for tests and documentation)
+@end itemize
+
+@section Build
+
+@enumerate
+@item Install dependencies:
+@example
+sudo apt update
+sudo apt install gcc g++ qtbase5-dev qt5-qmake qtchooser libgtest-dev lcov valgrind texinfo texlive
+@end example
+
+@item Build the project:
+@example
+make
+@end example
+
+@item Run the application:
+@example
+./3DViewer
+@end example
+
+@item Run tests:
+@example
+make tests
+@end example
+
+@item Generate documentation:
+@example
+make dvi
+@end example
+@end enumerate
+
+@node Project Structure
+@chapter Project Structure
+
+@itemize
+@item @file{backend} — core, business logic, model loading and processing
+@item @file{gui} — graphical user interface (Qt5)
+@item @file{headers} — common header files
+@item @file{tests} — unit tests (GoogleTest)
+@item @file{Makefile} — build, testing, coverage, documentation
+@end itemize
+
+@node Usage
+@chapter Usage
+
+@section Loading Models
+
+The application supports loading OBJ format files.  
+To load a model, use the application menu or the controller function:
+
+@example
+Controller ctrl;
+NormalizationParameters params = {0.0f, 1.0f, 1.0f, 1.0f};
+ctrl.LoadFromFile("model.obj", params);
+@end example
+
+@section Affine Transformations
+
+Scaling, translation, and rotation are available:
+
+@example
+ctrl.MoveScene(1.0, 0.0, 0.0);    // Move along X
+ctrl.RotateScene(0.0, 0.0, 3.14); // Rotate around Z
+ctrl.ScaleScene(2.0, 2.0, 2.0);   // Scale
+@end example
+
+@section Keyboard Controls
+
+@itemize
+@item Leff Arrow, Right Arrow — move along X
+@item Up Arrow, Down Arrow — move along Y
+@item Q, E — rotation
+@item Mouse Scroll — scaling
+@end itemize
+
+@node Testing
+@chapter Testing
+
+@section Running Unit Tests
+
+@example
+make tests
+@end example
+
+@section Code Coverage
+
+@example
+make gcov_report
+@end example
+
+@node Extension and Development
+@chapter Extension and Development
+
+@section Adding New Formats
+
+To support new formats, implement a class derived from @code{BaseFileReader} and register it in the controller.
+
+@section Adding New Tests
+
+Add tests to the @file{tests/} folder.  
+Use GoogleTest and helper functions to compare points and figures.
+
+@bye
