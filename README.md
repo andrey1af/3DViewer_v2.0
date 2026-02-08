@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.png" width="110" height="110" alt="3DViewer logo"/>
+  <img src="src/gui/resources/icons/logo.png" width="110" height="110" alt="3DViewer logo"/>
 </p>
 
 # 3DViewer v2.0
