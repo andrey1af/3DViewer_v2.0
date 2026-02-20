@@ -4,7 +4,7 @@
 
 # 3DViewer v2.0
 
-Desktop application for visualizing 3D models in .obj format.
+Desktop application for visualizing 3D models in .obj format. The project was carried out within the framework of School 21 - an educational project for developers from Sber.
 
 ## About
 
