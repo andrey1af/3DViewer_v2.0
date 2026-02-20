@@ -88,7 +88,3 @@ make install
 | `make memory` | Checks for memory leaks |
 | `make uninstall` | Removes the installed binary |
 | `make clean` | Cleans build artifacts |
-
-## Author
-
-- [Lafutkin Andrey](https://github.com/AndreyLafutkin)
